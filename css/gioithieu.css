@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .025s linear;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+/* header section */
+.header {
+    background-color: #fff;
+    overflow:auto;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width:100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;              /* lớn hơn thì ở trên */
+    visibility:hidden;         /*dùng để cuộn lên xuống thanh menu ẩn hiện*/
+    transition: visibility 0.0005s ease-in-out;         /*tgian ẩn hiện*/
+}
+.container {
+    width: 1120px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .container .logo img {
+    margin-top:3px;
+    width: 199px;
+    height: 60px;
+    flex-shrink: 0;
+}
+.header .container .nav {
+    display: flex;
+    justify-content: space-between;
+    line-height: 24px;
+    width: 507px;
+    margin-top: 8px;
+}
+.header .container .nav a {
+    color: #01334E;
+    font-size: 20px;
+    font-style: regular;
+    padding: 0 24px;
+
+}
+
+.header .container .nav a:hover {
+    color: #B69C01;
+    cursor: pointer;
+}
+.header .container .icon {
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 229px;
+}
+.header .container .icon a {
+    color:#01334E;
+    flex-shrink: 0;
+}
+.header .container .icon a:hover {
+    color:#B69C01;
+}
+
+/* head-member section */
+.head-member {
+    overflow:auto;
+    position:relative;
+    top: 64px;
+    left: 0;
+    right: 0;
+    width:100%;
+    z-index: 90;
+}
+.head-member .member {
+    height: 100px;
+    position:relative;
+    top: 0px;
+    width: 1120px;
+    margin: auto;
+}
+
+.head-member .member h3 {
+    color: #01344E;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 50% */
+    margin-top: 104px;
+    margin-left: 0;
+}
+.head-member .member hr {
+    border: none;
+    border-bottom: solid 2px rgba(207, 207, 207, 1);   
+    width: 1120px;
+    height: 29px;
+    
+}
+.imgcover {
+    display: block;
+    overflow:hidden;
+    max-width: 100%;
+    min-width: 100%;
+    height: 616px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.head-member .imgcover .btn {
+    border: none;
+    outline: none;
+    padding: 4px 6px;
+    color: #B69C01;
+    background-color: #fff;
+    position:absolute;
+    top: 85%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+
+/*Profile section*/
+.profile {
+    display: flex;
+    justify-content: space-between;
+    width: 870px;
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    margin-top: 184px;
+}
+.card {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #01334E;
+    overflow: hidden;
+    margin: 0 30px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-img {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    transition: 0.25s;
+    margin: 0 auto;
+    transform: translateY(25px);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 4px solid #7BFFFF;
+}
+  
+.card-img:hover {
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
+    border: unset;
+    transform: unset;
+}
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-color: #fff;
+}
+.card-social{
+    margin: 41px 0;
+}
+.card-social a{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+}
+.card h2 {
+    color: #fff;
+    margin-top: 40px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 24px;
+    padding-top: 50px;
+}
+  
+.card p {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 24px;
+    padding-top: 20px;
+}
+
+/* footer */
+.footer {
+    overflow:auto;
+    position:relative;
+    top: 120px;
+    left: 0;
+    right: 0;
+    width:100%;
+    height: 400px;                  /*can fix*/
+    z-index: 80;   
+}
+.footer hr {
+    border:none;
+    border-bottom: solid 2px rgba(207, 207, 207, 1);     
+    width: 1120px;
+    height: 29px;
+    margin: auto;
+    
+}
+.footer .content {
+    margin: auto;
+    width:1120px;
+    display:flex;
+    justify-content: space-between;
+}
+.st-footer {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.st-footer img {
+    margin-top: 25px;
+}
+.st-footer p {
+    color: #01334E;
+    font-family: League Spartan;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px; /* 130% */
+}
+.st-footer .icon-footer {
+    margin-top: 25px;
+    display:flex;
+    justify-content: space-between;
+}
+.icon-footer a {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #01334E;
+    color:#fff;
+}
+.nd-footer {
+    margin-top: 61px;
+}
+.nd-footer h3 {
+    color: #01334E;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 85.714% */
+}
+.nd-footer p {
+    color: #01334E;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px; /* 120% */
+}
+.rd-footer {               /*rd-footer*/
+    margin-top: 61px;
+}
+.rd-footer h3 {
+    color: #01334E;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 85.714% */
+}
+.rd-footer p {
+    color: #01334E;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px; /* 120% */
+}
+.fourth-footer {                   /*fourth-footer*/
+    margin-top: 61px;
+}
+.fourth-footer h3 {
+    color: #01334E;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 85.714% */
+}
+.fourth-footer p {
+    color: #01334E;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px; /* 120% */
+}
+.bottom-footer {
+    display:flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.bottom-footer p {
+    color: #01334E;
+    font-family: League Spartan;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 24px; /* 100% */
+}
+.nd-footer a p:hover {
+    color: #b69c01;
+    transition: color 0.005s ease-in-out;
+}
+.rd-footer a p:hover {
+    color: #b69c01;
+    transition: color 0.005s ease-in-out;
+}
+
+
+@media (min-height: 500px) {                    /*khi lướt thanh menu ẩn hiện*/
+    .header {
+        visibility:visible;
+    }
+    
+}
+@media (min-height: 400px) {                    /*khi lướt thanh menu ẩn hiện*/
+    .header {
+        visibility:visible;
+    }
+}
+@media (max-width:1920px) {
+    .imgcover img {
+        border-radius: 100px;
+    }  
+}
+@media (max-width: 1440px) {
+    .imgcover img {
+        border-radius: 0;
+    }
+}
